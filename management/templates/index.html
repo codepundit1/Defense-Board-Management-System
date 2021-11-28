@@ -1,15 +1,24 @@
-{% extends "main.html" %} {% load static %} {% block content %}
+{% extends "main.html" %}{% load static %} {% block content %}
 
 <!-- bannner -->
 <div id="banner" class="container-fluid">
     <div class="row ">
         <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
-            <div class="col-lg-8 col-md-12 col-sm-12 text-center">
+            <div class="col-lg-8 col-md-6 col-sm-12 text-center">
                 <h1 class="text-white">DIU Defense Board Management System</h1>
                 <p class="mt-4" style="font-size: 18px; color: #e7f4ff;">Dhaka International University (DIU) is one of the leading, familiar and note-worthy private universities in Bangladesh. Department of Software Engineering (SE) is one of the most important organ of this university. All the final year
                     students have to do a mandatory year-long development project, research project or internship.</p>
                 <br>
-                <a href="{% url 'register' %}" id="# " class="btn btn-primar get-started-btn mt-3 ">Get started</a>
+
+                {% if user.is_authenticated %}
+
+                 <a href="{% url 'home' %}" id="# " class="btn btn-primar get-started-btn mt-3 ">Dashboard</a>
+                
+                {% else %}
+                
+                <a href="{% url 'login' %}" id="# " class="btn btn-primar get-started-btn mt-3 ">Get started</a>
+
+                {% endif %}
             </div>
         </div>
     </div>
@@ -23,23 +32,57 @@
             <br>
             <h2 class="mt-2">About DIU DBMS</h2>
             <br>
-            <p>Welcome to DIU PMIS. DIU Project Management Information System aka DIU PMIS provides a single point access to final year project information for both students and faculties. </p>
+            <p>Welcome to DIU DBMS. DIU Project Defense Board Management System. DIU DBMS provides a single point access to final year project information for both students and faculties. </p>
             <p>All the final year students of department of CSE have to do a mandatory year-long development project, research project or internship. Over a year, a student needs to attend six regular followups, three grand followups, prepare their report,
                 presentation and lots of other stuffs. To ease up the entire process and keep track of each and every events, DIU PMIS was created.</p>
             <br>
-            <a href="" class="btn btn-primary register-button">Register for Title Defense</a>
+            <a href="" class="btn btn-primary register-button">Register for Defense</a>
         </div>
 
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-12" style="padding-top:50px;">
             <img src={% static "images/svg/about-dbms-1.svg" %} alt="" class="img-fluid float-right">
         </div>
     </div>
 </div>
 
 
+<!-- Index Contact -->
 
+<div class="container-fluid">
+    <div id="index-contact" class="row text-center">
+        <div class="contact-text-area d-block">
+            <h1>Project/Internship/Thesis Committe</h1>
+            <p>For any queries regarding project/internship contact the above mentioned persons.</p>
+        </div>
 
+        <div class="col-md-4 py-5">
+            <img src={% static "images/contact-img/matiur.jpg" %} alt="" class="img-fluid rounded-circle d-block mx-auto" style="height: 150px; width: 150px;">
+            <div class="img-text py-5">
+                <p>Lecturer (Senior Scale)</p>
+                <p>syeda.swe@diu.edu.bd</p>
+                <p>+8801918455555</p>
+            </div>
+        </div>
 
+        <div class="col-md-4 py-5">
+            <img src={% static "images/contact-img/syeda.jpg" %} alt="" class="img-fluid rounded-circle  d-block mx-auto" style="height: 150px; width: 150px;">
+            <div class="img-text py-5">
+                <p>Lecturer (Senior Scale)</p>
+                <p>syeda.swe@diu.edu.bd</p>
+                <p>+8801918455555</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 py-5">
+            <img src={% static "images/contact-img/rabby.jpg" %} alt="" class="img-fluid rounded-circle  d-block mx-auto" style="height: 150px; width: 150px;">
+            <div class="img-text py-5">
+                <p>Lecturer (Senior Scale)</p>
+                <p>syeda.swe@diu.edu.bd</p>
+                <p>+8801918455555</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

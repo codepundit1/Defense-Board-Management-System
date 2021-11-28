@@ -1,0 +1,70 @@
+ {% extends "main.html" %} {% load static %} {% block content%}
+<div class="container">
+    <div class="row ">
+        <section id="login">
+            <div class="login-form">
+             
+                <div class="row d-flex align-items-center justify-content-center ">
+                    <div class="col-lg-6 col-md-6 col-sm-12 ">
+                        <img src={% static "images/svg/unlock-login.svg" %} class="img-fluid login-img-area" alt="Phone image">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 login-area">
+                        <form action = "#" method = "post">
+                            <!-- Email input -->
+                            {% csrf_token %}
+                            <h3 class=" text-center fw-bold py-2">Sign in</h3>
+                            <div class="form-outline mb-4">
+                                <label for="username">User name</label>
+                                <input type="text" name = "username" id="login-username" class="form-control" placeholder="Enter your username" />
+
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <label for="password">Password</label>
+                                <input type="password" name = "password" id="login-password" class="form-control" placeholder="Enter your password" />
+
+                            </div>
+                            
+
+                            
+
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <!-- Checkbox -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                                    <label class="form-check-label" for="form1Example3"> Remember me </label>
+                                </div>
+                                <a href="#!">Forgot password?</a>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary signin-login-btn">Sign in</button>
+
+
+                              {% for msg in messages %}
+                              <p class = "py-2 text-danger"> {{ msg }} </p>
+                              {% endfor %}
+
+
+                            <hr class="mt-4">
+                            <div class="col-12">
+                                <p class="text-center mb-0">Have not account yet? <a href="{% url 'register' %}">Sign up</a></p>
+                            </div>
+                           
+                            <div class="d-flex align-items-center justify-content-center mt-3 mb-2">
+                                <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+                            </div>
+                            <a class="btn btn-primary d-flex align-items-center justify-content-center " style="background-color: #3b5998" href="#!" role="button">
+                                Google
+                            </a>
+
+                        </form>
+                    </div>
+                  
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{%endblock%}
