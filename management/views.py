@@ -70,3 +70,7 @@ def contact(request):
 
 def user_home(request):
     return render(request, "user/home.html")
+
+# user defense registration
+def user_defense_reg(request):
+    return render(request, "user/defense_register.html")

@@ -9,5 +9,6 @@ urlpatterns = [
     # after user login
     path("home/", views.user_home, name="home"),
     path("logout/", views.user_logout, name="logout"),
+    path("defense_reg", views.user_defense_reg, name="defense_reg")
     
 ]
