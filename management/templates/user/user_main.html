@@ -9,26 +9,38 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'user/style.css' %}" />
+
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&family=Montserrat:ital,wght@1,900&family=Roboto:wght@300&display=swap');
         body {
-            font-family: Poppins, sans-serif;
+            font-family: 'Roboto', sans-serif;
             overflow-x: hidden;
-            background: rgb(240, 240, 240);
+            background: rgba(255, 255, 255, 0.904);
         }
         /* navabr */
         
         .navbar-light .navbar-nav .nav-link.active,
         .navbar-light .navbar-nav .show>.nav-link {
-            margin-right: 26px;
+            letter-spacing: 0.75px;
             font-size: 16px;
+            padding-top: 0.5rem;
+            padding-right: 1.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 0.7rem;
+            line-height: 2rem;
         }
+        
+        #navbarSupportedContent li a:hover {
+            font-size: 18px;
+            transition: all 0.5s ease;
+            font-weight: 700;
+        }
+        /* dropdown */
         /* student pannel */
         
         .student-pannel {
-            background: white;
+            background: rgb(241, 240, 240);
             height: 80px;
             border-radius: 5px;
         }
@@ -98,9 +110,37 @@
             letter-spacing: 1.25px;
             text-transform: uppercase;
         }
+        /* Notice and eligiblity */
+        
+        .notice-section {
+            border: 2px solid gray;
+            border-radius: 5px;
+            letter-spacing: 0.75px;
+            margin-top: 85px;
+        }
+        
+        .notice-section>h1 {
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        
+        .notice-section>h4 {
+            font-size: 22px;
+        }
+        /* Notice and eligiblity */
+        
+        .eligiblity-section {
+            margin-top: 85px;
+            letter-spacing: 0.75px;
+        }
+        
+        .eligiblity-section>h1 {
+            font-weight: 700;
+            letter-spacing: 1.25px;
+        }
     </style>
 
-    <title>Home | DBMS</title>
+    <title> Home | DBMS</title>
 </head>
 
 <body>
@@ -123,8 +163,17 @@
     </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js " integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js " integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13 " crossorigin="anonymous "></script>
+    <script>
+        var typed = new Typed(".auto-type-title", {
+            strings: ["Project", "Thesis", "Internship"],
+            typeSpeed: 200,
+            backSpeed: 200,
+            loop: true
+        })
+    </script>
 </body>
 
 </html>
