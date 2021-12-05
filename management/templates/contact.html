@@ -1,19 +1,103 @@
-{% extends "main.html" %} {% load static %} {% block content %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends "main.html" %} 
+{% load static %} {% block  title %}DBMS | Contact{% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row" id="contact-page">
+        <h1 class="text-center contact-heading text-dark fw-bold">
+            Contact Information
+        </h1>
+        <p class="text-center text-muted">
+            In any queries regarding project/internship/thesis contact with Project
+            Internship Committee i. For any other queries you may contact SE Office.
+        </p>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+        <div class="row">
+            <h4 class="py-3 mt-5">Project Thesis Internship Committee Members</h4>
+            <hr class="mb-4 mt-0 d-inline-block" style="width: 1089px; background-color: #00ff40; height: 2px" />
+        </div>
+        <div class="row">
+            <table class="table" id="contact-table1">
+                <tbody>
+                    <tr class="bg-primary text-light fw-bold">
+                        <th scope="row">Picture</th>
+                        <td>Contact Person & Designation</td>
+                        <td>Contact Detail</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <img src={% static "images/profile/p-1.png" %} class="img-fluid
+              mt-3" style="height: 120px; width: 120px;" alt="">
+                        </th>
+                        <td class="designation">Associate Professor and Associate Head</td>
+                        <td class="contact-details">
+                            <p>Phone: +8801764619998</p>
+                            <p>E-mail: matiur.swe@diu.edu.bd</p>
+                            <p>Office Room: N/A</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <img src={% static "images/profile/p-2.png" %} class="img-fluid
+              mt-3" style="height: 120px; width: 120px;" alt="">
+                        </th>
+                        <td class="designation">Associate Professor and Associate Head</td>
+                        <td class="contact-details">
+                            <p>Phone: +8801764619998</p>
+                            <p>E-mail: matiur.swe@diu.edu.bd</p>
+                            <p>Office Room: N/A</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <img src={% static "images/profile/p-3.svg" %} class="img-fluid
+              mt-3" style="height: 120px; width: 120px;" alt="">
+                        </th>
+                        <td class="designation">Associate Professor and Associate Head</td>
+                        <td class="contact-details">
+                            <p>Phone: +8801764619998</p>
+                            <p>E-mail: matiur.swe@diu.edu.bd</p>
+                            <p>Office Room: N/A</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <img src={% static "images/profile/p-4.svg" %} class="img-fluid
+              mt-3" style="height: 120px; width: 120px;" alt="">
+                        </th>
+                        <td class="designation">Associate Professor and Associate Head</td>
+                        <td class="contact-details">
+                            <p>Phone: +8801764619998</p>
+                            <p>E-mail: matiur.swe@diu.edu.bd</p>
+                            <p>Office Room: N/A</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="mt-5">SE Office</h4>
+            <hr class="mb-4 mt-0 d-inline-block" style="width: 1089px; background-color: #00ff40; height: 2px" />
+            <table class="table" id="contact-table2">
+                <tbody>
+                    <tr class="bg-primary text-light fw-bold">
+                        <th scope="row ">Picture</th>
+                        <td>Contact Person & Designation</td>
+                        <td>Contact Detail</td>
+                    </tr>
 
-<body>
-    <div class="row">
-        Contact lorem500
+                    <tr>
+                        <th scope="row ">
+                            <img src={% static "images/profile/p-5.svg " %} class="img-fluid
+              mt-3 " style="height: 120px; width: 120px; " alt=" ">
+                        </th>
+                        <td class="designation">Associate Professor and Associate Head</td>
+                        <td class="contact-details">
+                            <p>Phone: +8801764619998</p>
+                            <p>E-mail: matiur.swe@diu.edu.bd</p>
+                            <p>Office Room: N/A</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-</body>
-
-</html>
+</div>
 {% endblock %}

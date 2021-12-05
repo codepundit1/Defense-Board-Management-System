@@ -1,4 +1,7 @@
-{% extends "main.html" %}{% load static %} {% block content %}
+{% extends "main.html" %}
+{% block  title %}DBMS | Home{% endblock title %}
+{% load static %}
+{% block content %}
 
 <!-- bannner -->
 <div id="banner" class="container-fluid">
@@ -26,11 +29,12 @@
             <br>
             <h2 class="mt-2">About DIU DBMS</h2>
             <br>
-            <p>Welcome to DIU DBMS. DIU Project Defense Board Management System. DIU DBMS provides a single point access to final year project information for both students and faculties. </p>
-            <p>All the final year students of department of CSE have to do a mandatory year-long development project, research project or internship. Over a year, a student needs to attend six regular followups, three grand followups, prepare their report,
-                presentation and lots of other stuffs. To ease up the entire process and keep track of each and every events, DIU PMIS was created.</p>
-            <br>
-            <a href="" class="btn btn-primary register-button">Register for Defense</a>
+            <p>Welcome to DIU DBMS. DIU Defense Board Management System provides a single point access to final year project information for both students and faculties. </p>
+            <p>All the final year students of department of SE have to do a mandatory development project, research project or internship. In this course, Students need to attend Pre-defense/Mid-defense. After they need to attend Final defense.
+            </p>
+            <br> {% if user.is_authenticated %}
+            <a href="{%url 'defense_reg'%}" class="btn btn-primary register-button">Register for Defense</a> {% else %}
+            <a href="{%url 'login'%}" class="btn btn-primary register-button">Register for Defense</a> {% endif %}
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12" style="padding-top:50px;">
@@ -42,16 +46,27 @@
 
 <!-- Index Contact -->
 
-<div class="container-fluid">
+<div class="container">
     <div id="index-contact" class="row text-center">
-        <div class="contact-text-area d-block">
-            <h1>Project/Internship/Thesis Committe</h1>
-            <p>For any queries regarding project/internship contact the above mentioned persons.</p>
+        <div class="contact-text-area">
+            <h2>Project/Internship/Thesis Committe</h2>
+            <p class="text-muted">For any queries regarding project/internship contact the above mentioned persons.</p>
         </div>
 
         <div class="col-md-4 py-5">
-            <img src={% static "images/contact-img/matiur.jpg" %} alt="" class="img-fluid rounded-circle d-block mx-auto" style="height: 150px; width: 150px;">
+            <img src={% static "images/profile/p-1.png" %} alt="" class="img-fluid rounded-circle d-block mx-auto" style="height: 150px; width: 150px;">
             <div class="img-text py-5">
+                <h4 class="fw-bold text-dark">Mr. S A M Matiur Rahman</h4>
+                <p>Associate Professor and Associate Head</p>
+                <p>matiur.swe@diu.edu.bd</p>
+                <p>+8801764619998</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 py-5">
+            <img src={% static "images/profile/p-4.svg" %} alt="" class="img-fluid rounded-circle  d-block mx-auto" style="height: 150px; width: 150px;">
+            <div class="img-text py-5">
+                <h4 class="fw-bold text-dark">Ms. Syeda Sumbul Hossain</h4>
                 <p>Lecturer (Senior Scale)</p>
                 <p>syeda.swe@diu.edu.bd</p>
                 <p>+8801918455555</p>
@@ -59,22 +74,15 @@
         </div>
 
         <div class="col-md-4 py-5">
-            <img src={% static "images/contact-img/syeda.jpg" %} alt="" class="img-fluid rounded-circle  d-block mx-auto" style="height: 150px; width: 150px;">
+            <img src={% static "images/profile/p-5.svg" %} alt="" class="img-fluid rounded-circle  d-block mx-auto" style="height: 150px; width: 150px;">
             <div class="img-text py-5">
-                <p>Lecturer (Senior Scale)</p>
-                <p>syeda.swe@diu.edu.bd</p>
-                <p>+8801918455555</p>
+                <h4 class="fw-bold text-dark">Mr. Sk. Fazlee Rabby</h4>
+                <p>Lecturer</p>
+                <p>fazleerabby.swe@diu.edu.bd</p>
+                <p>+8801711399300</p>
             </div>
         </div>
-
-        <div class="col-md-4 py-5">
-            <img src={% static "images/contact-img/rabby.jpg" %} alt="" class="img-fluid rounded-circle  d-block mx-auto" style="height: 150px; width: 150px;">
-            <div class="img-text py-5">
-                <p>Lecturer (Senior Scale)</p>
-                <p>syeda.swe@diu.edu.bd</p>
-                <p>+8801918455555</p>
-            </div>
-        </div>
+        <a href="{% url 'contact' %}" id="# " class="btn btn-primary mt-3 more-btn">More<i class="fal fa-arrow-right ml-2"></i></a>
     </div>
 </div>
 

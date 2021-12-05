@@ -9,32 +9,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> {% load static %}
-
-
+    <link rel="icon" href="{% static '/images/logo/title.png' %}" type="image/gif/png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&family=Montserrat:ital,wght@1,900&family=Roboto:wght@300&display=swap');
         body {
             font-family: 'Roboto', sans-serif;
             overflow-x: hidden;
             background: rgba(255, 255, 255, 0.904);
+            color: #2c2c2c;
         }
         /* navabr */
         
         .navbar-light .navbar-nav .nav-link.active,
         .navbar-light .navbar-nav .show>.nav-link {
             letter-spacing: 0.75px;
-            font-size: 16px;
+            font-size: .9442em;
             padding-top: 0.5rem;
-            padding-right: 1.5rem;
+            padding-right: 1.25rem;
             padding-bottom: 0.5rem;
-            padding-left: 0.7rem;
+            padding-left: 1rem;
             line-height: 2rem;
         }
         
         #navbarSupportedContent li a:hover {
-            font-size: 18px;
-            transition: all 0.5s ease;
             font-weight: 700;
+            background-image: linear-gradient(135deg, #ffffff3d, #d6d6d667);
+            opacity: .80;
+            transition: all 0.4s ease;
+            border-radius: 5px;
         }
         /* dropdown */
         /* student pannel */
@@ -138,29 +140,45 @@
             font-weight: 700;
             letter-spacing: 1.25px;
         }
+        /* footer */
+        
+        #helpfull-links:hover {
+            color: #2d73fff3!important;
+            text-decoration: none;
+        }
     </style>
 
-    <title> Home | DBMS</title>
+    <title>{% block title %} {% endblock title %}</title>
 </head>
 
 <body>
-    {% comment %} navabr start{% endcomment %}
+    <!-- Navbar start -->
     <div class="container-fluid">
         <div class="row">
             {% include "user/user_navbar.html" %}
         </div>
     </div>
+    <!-- navbar end -->
+
+    <!-- student pannel start -->
+    {% include "user/user_studentPannel.html" %}
+    <!-- student pannel end -->
 
 
+    <!-- body start-->
     {%block content%} {%endblock%}
+    <!-- body end -->
 
 
 
+    <!-- footer start -->
     <div class="container-fluid">
         <div class="row">
             {% include "user/user_footer.html" %}
         </div>
     </div>
+    <!-- footer end -->
+
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

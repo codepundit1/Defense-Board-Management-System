@@ -1,14 +1,14 @@
 {% load static %}
-<footer class="text-center text-lg-start" style="background-color: #272727">
-    <section style="color: #21D192;">
-        <div class="container text-center text-md-start mt-5">
+<footer class=" text-lg-start" style="background-color: #272727">
+    <section style="color: #c7c2c2;">
+        <div class="container text-md-start mt-5">
 
             <div class="row mt-3">
 
                 <div class="col-md-6">
 
                     <img src={% static "images/logo/logo.png" %} alt="">
-                    <p class="text-alignment-justify mt-3">
+                    <p class="text-justify mt-3 mr-4 ">
                         Daffodil International University (DIU) is recognized in independent government assessments as one of top graded universities in Bangladesh.
                     </p>
                 </div>
@@ -20,13 +20,13 @@
                     <h6 class="text-uppercase fw-bold">Helpfull Links</h6>
                     <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 132px; background-color: #dfd3ff; height: 2px" />
                     <p>
-                        <a href="#!" style="color: #21D192;">Contact</a>
+                        <a href="{% url 'contact' %}" style="color: #c7c2c2;" id="helpfull-links"><i class="fal fa-angle-right mr-2"></i></i>Contact</a>
                     </p>
                     <p>
-                        <a href="#!" style="color: #21D192;">Help Center</a>
+                        <a href="#!" style="color: #c7c2c2;" id="helpfull-links"><i class="fal fa-angle-right mr-2"></i></i>Help Center</a>
                     </p>
                     <p>
-                        <a href="#!" style="color: #21D192;">Instruction</a>
+                        <a href="#!" style="color: #c7c2c2;" id="helpfull-links"><i class="fal fa-angle-right mr-2"></i>Instruction</a>
                     </p>
                 </div>
 
@@ -34,7 +34,7 @@
 
                 <div class="col-md-3">
 
-                    <h6 class="text-uppercase fw-bold">Contact</h6>
+                    <h6 class="text-uppercase fw-bold ">Contact</h6>
                     <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; background-color: #dfd3ff; height: 2px" />
                     <p> 4/2, Daffodil Tower, Sobhanbag, Mirpur Rd</p>
                     <p> Dhaka-1207</p>
